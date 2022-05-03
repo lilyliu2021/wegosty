@@ -55,88 +55,88 @@ def log_out():
     sleep(l)
 
 
-def create_new_student():
-    driver.find_element(By.LINK_TEXT, 'My WeGoStudy').click()
-    sleep(1)
-    driver.find_element(By.LINK_TEXT, 'Students').click()
-    sleep(1)
-    driver.find_element(By.LINK_TEXT, 'Create New Student').click()
-    sleep(1)
-    # __________________Personal_Information______________________________
-    driver.find_element(By.ID, 'user_student_detail_attributes_first_name').send_keys(locators.first_name)
-    sleep(0.3)
-    driver.find_element(By.ID, 'user_student_detail_attributes_last_name').send_keys(locators.last_name)
-    sleep(0.3)
-    driver.find_element(By.ID, 'user_student_detail_attributes_preferred_name').send_keys(locators.first_name)
-    sleep(0.3)
-    # driver.find_element(By.ID, 'user_student_detail_attributes_passport_number').send_keys(locators.passport_number)
-    # sleep(1)
-    driver.find_element(By.ID, 'phone_number').send_keys(locators.phone_number)
-    sleep(0.3)
-    driver.find_element(By.ID, 'select2-user_student_detail_attributes_country_of_citizenship-container').click()
-    sleep(0.3)
-    driver.find_element(By.XPATH, '//input[@type="search"]').send_keys('Canada')
-    sleep(0.3)
-    driver.find_element(By.XPATH, '//*[@id="user_student_detail_attributes_country_of_citizenship"]/option[40]').click()
-    sleep(0.3)
-    driver.find_element(By.ID, 'user_student_detail_attributes_passport_number').send_keys(locators.passport_number)
-    sleep(0.3)
-    driver.find_element(By.ID, 'user_student_detail_attributes_birth_date').send_keys('2000-03-15')
-    sleep(0.3)
-    driver.find_element(By.ID, 'user_student_detail_attributes_birth_date').clear()
-    sleep(0.3)
-    driver.find_element(By.ID, 'user_student_detail_attributes_birth_date').send_keys('2000 03 1')
-    sleep(0.3)
-    # __________________Contact Information______________________________
-    driver.find_element(By.ID, 'user_student_detail_attributes_address_attributes_mailing_address').send_keys(
-        locators.mailing_address)
-    sleep(0.3)
-    driver.find_element(By.LINK_TEXT, 'Country').click()
-    sleep(0.3)
-    driver.find_element(By.XPATH,
-                        '//*[@id="user_student_detail_attributes_address_attributes_country_chosen"]/div/ul/li[40]').click()
-    sleep(0.6)
-    driver.find_element(By.LINK_TEXT, 'Province/State').click()
-    sleep(0.6)
-    driver.find_element(By.XPATH,
-                        '//*[@id="user_student_detail_attributes_address_attributes_state_chosen"]/div/ul/li[3]').click()
-    sleep(0.6)
-    driver.find_element(By.LINK_TEXT, 'City').click()
-    sleep(0.6)
-    driver.find_element(By.XPATH,
-                        '//*[@id="user_student_detail_attributes_address_attributes_city_chosen"]/div/ul/li[30]').click()
-    sleep(0.6)
-    driver.find_element(By.ID, 'user_student_detail_attributes_address_attributes_zip_code').send_keys(
-        locators.postal_code)
-    sleep(0.6)
-    driver.find_element(By.ID, 'user_email').send_keys(locators.user_email)
-    sleep(0.6)
-    # __________________Education Information______________________________
-    driver.find_element(By.LINK_TEXT, 'Credentials').click()
-    sleep(0.6)
-    driver.find_element(By.XPATH,
-                        '//*[@id="user_student_detail_attributes_user_educations_attributes_0_credentials_chosen"]/div/ul/li[3]').click()
-    sleep(0.3)
-    driver.find_element(By.ID, 'user_student_detail_attributes_user_educations_attributes_0_school_name').send_keys(
-        'CCTB')
-    sleep(0.3)
-    driver.find_element(By.ID, 'user_student_detail_attributes_user_educations_attributes_0_program').send_keys('SQTA')
-    sleep(0.3)
-    # _______________________________________
-    driver.find_element(By.LINK_TEXT, 'GPA Scale').click()
-    sleep(0.3)
-    driver.find_element(By.XPATH,
-                        '//*[@id="user_student_detail_attributes_user_educations_attributes_0_gpa_scale_chosen"]/div/div/input').send_keys(
-        '100')
-    sleep(0.3)
-    driver.find_element(By.XPATH,
-                        '//*[@id="user_student_detail_attributes_user_educations_attributes_0_gpa_scale_chosen"]/a/span').select_by_visible_text(
-        '100')
-    sleep(0.3)
-    # __________________________________________
-    driver.find_element(By.ID, 'user_student_detail_attributes_user_educations_attributes_0_gpa').send_keys('4.0')
-    sleep(0.3)
-    # driver.find_element(By.XPATH, '//input[@value="Save"]').click()
+# def create_new_student():
+#     driver.find_element(By.LINK_TEXT, 'My WeGoStudy').click()
+#     sleep(1)
+#     driver.find_element(By.LINK_TEXT, 'Students').click()
+#     sleep(1)
+#     driver.find_element(By.LINK_TEXT, 'Create New Student').click()
+#     sleep(1)
+#     # __________________Personal_Information______________________________
+#     driver.find_element(By.ID, 'user_student_detail_attributes_first_name').send_keys(locators.first_name)
+#     sleep(0.3)
+#     driver.find_element(By.ID, 'user_student_detail_attributes_last_name').send_keys(locators.last_name)
+#     sleep(0.3)
+#     driver.find_element(By.ID, 'user_student_detail_attributes_preferred_name').send_keys(locators.first_name)
+#     sleep(0.3)
+#     # driver.find_element(By.ID, 'user_student_detail_attributes_passport_number').send_keys(locators.passport_number)
+#     # sleep(1)
+#     driver.find_element(By.ID, 'phone_number').send_keys(locators.phone_number)
+#     sleep(0.3)
+#     driver.find_element(By.ID, 'select2-user_student_detail_attributes_country_of_citizenship-container').click()
+#     sleep(0.3)
+#     driver.find_element(By.XPATH, '//input[@type="search"]').send_keys('Canada')
+#     sleep(0.3)
+#     driver.find_element(By.XPATH, '//*[@id="user_student_detail_attributes_country_of_citizenship"]/option[40]').click()
+#     sleep(0.3)
+#     driver.find_element(By.ID, 'user_student_detail_attributes_passport_number').send_keys(locators.passport_number)
+#     sleep(0.3)
+#     driver.find_element(By.ID, 'user_student_detail_attributes_birth_date').send_keys('2000-03-15')
+#     sleep(0.3)
+#     driver.find_element(By.ID, 'user_student_detail_attributes_birth_date').clear()
+#     sleep(0.3)
+#     driver.find_element(By.ID, 'user_student_detail_attributes_birth_date').send_keys('2000 03 1')
+#     sleep(0.3)
+#     # __________________Contact Information______________________________
+#     driver.find_element(By.ID, 'user_student_detail_attributes_address_attributes_mailing_address').send_keys(
+#         locators.mailing_address)
+#     sleep(0.3)
+#     driver.find_element(By.LINK_TEXT, 'Country').click()
+#     sleep(0.3)
+#     driver.find_element(By.XPATH,
+#                         '//*[@id="user_student_detail_attributes_address_attributes_country_chosen"]/div/ul/li[40]').click()
+#     sleep(0.6)
+#     driver.find_element(By.LINK_TEXT, 'Province/State').click()
+#     sleep(0.6)
+#     driver.find_element(By.XPATH,
+#                         '//*[@id="user_student_detail_attributes_address_attributes_state_chosen"]/div/ul/li[3]').click()
+#     sleep(0.6)
+#     driver.find_element(By.LINK_TEXT, 'City').click()
+#     sleep(0.6)
+#     driver.find_element(By.XPATH,
+#                         '//*[@id="user_student_detail_attributes_address_attributes_city_chosen"]/div/ul/li[30]').click()
+#     sleep(0.6)
+#     driver.find_element(By.ID, 'user_student_detail_attributes_address_attributes_zip_code').send_keys(
+#         locators.postal_code)
+#     sleep(0.6)
+#     driver.find_element(By.ID, 'user_email').send_keys(locators.user_email)
+#     sleep(0.6)
+#     # __________________Education Information______________________________
+#     driver.find_element(By.LINK_TEXT, 'Credentials').click()
+#     sleep(0.6)
+#     driver.find_element(By.XPATH,
+#                         '//*[@id="user_student_detail_attributes_user_educations_attributes_0_credentials_chosen"]/div/ul/li[3]').click()
+#     sleep(0.3)
+#     driver.find_element(By.ID, 'user_student_detail_attributes_user_educations_attributes_0_school_name').send_keys(
+#         'CCTB')
+#     sleep(0.3)
+#     driver.find_element(By.ID, 'user_student_detail_attributes_user_educations_attributes_0_program').send_keys('SQTA')
+#     sleep(0.3)
+#     # _______________________________________
+#     driver.find_element(By.LINK_TEXT, 'GPA Scale').click()
+#     sleep(0.3)
+#     driver.find_element(By.XPATH,
+#                         '//*[@id="user_student_detail_attributes_user_educations_attributes_0_gpa_scale_chosen"]/div/div/input').send_keys(
+#         '100')
+#     sleep(0.3)
+#     driver.find_element(By.XPATH,
+#                         '//*[@id="user_student_detail_attributes_user_educations_attributes_0_gpa_scale_chosen"]/a/span').select_by_visible_text(
+#         '100')
+#     sleep(0.3)
+#     # __________________________________________
+#     driver.find_element(By.ID, 'user_student_detail_attributes_user_educations_attributes_0_gpa').send_keys('4.0')
+#     sleep(0.3)
+#     # driver.find_element(By.XPATH, '//input[@value="Save"]').click()
 
 
 def create_application():
@@ -204,20 +204,7 @@ def tearDown():
         driver.close()
         driver.quit()
 
-        # logger('delleted')
 
-
-# def logger(action: object):
-#     old_instance = sys.stdout
-#     log_file = open('message.log', 'a')
-#     sys.stdout = log_file
-#     print(f'{locators.email}\t'
-#           f'{locators.username}\t'
-#           f'{locators.password}\t'
-#           f'{datetime.datetime.now()}\t'
-#           f'{action}')
-#     sys.stdout = old_instance
-#     log_file.close()
 
 setUp()
 login()
